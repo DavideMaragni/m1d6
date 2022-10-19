@@ -1,0 +1,80 @@
+#card-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #card {
+    background-image: url('natura.jpg');
+    width: 800px;
+    height: 1200px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%/5%;
+    overflow: hidden;
+  }
+  
+  #card-overlay {
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    background: #00000069;
+    opacity: 0;
+    transition: opacity ease 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  #card:hover #card-overlay {
+    opacity: 1;
+  }
+  
+  #button-top {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  #button-bottom {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* button animations */
+  #button-top  button {
+    position: relative;
+    top: -80px;
+    transition: top 1.5s;
+    border-radius:25px;
+    background-color: rgb(255, 0, 0);
+    width: 100px;
+    height: 50px;
+    color: white;
+  }
+  
+  #button-bottom  button {
+    position: relative;
+    bottom: -40px;
+    transition: bottom 1.5s;
+  }
+
+  @media all and (min-width: 20px) {
+    .but1 { flex: 1 0 0; }
+  }
+
+  #card:hover #button-top > button {
+    top: 0;
+    width: 100px;
+    height: 50px;
+    border-radius:25px;
+  }
+  
+  #card:hover #button-bottom > button {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    border-radius:25px;
+  }
+  svg {
+    width: 20px;
+}
